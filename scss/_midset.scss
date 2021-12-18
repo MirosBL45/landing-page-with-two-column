@@ -1,0 +1,224 @@
+main {
+	background: $Light_Grayish_Blue;
+	padding-top: 5rem;
+	position: relative;
+	clip-path: polygon(50% 0%, 100% 2%, 100% 100%, 0 100%, 0 2%);
+
+	@include odaziv(smallphone) {
+		clip-path: polygon(50% 0%, 100% 0.7%, 100% 100%, 0 100%, 0 0.7%);
+	}
+
+	.visina {
+		@include odaziv(smallphone) {
+			height: 700px;
+		}
+	}
+
+	.main_stay {
+		font-family: 'Raleway', sans-serif;
+		display: flex;
+		justify-content: space-between;
+		height: 650px;
+
+		@include odaziv(smallphone) {
+			flex-direction: column-reverse;
+		}
+
+		&__text {
+			flex-basis: 50%;
+			background: none;
+
+			h2 {
+				margin-bottom: 2rem;
+				font-size: 1.9rem;
+
+				@include odaziv(smallphone) {
+					text-align: center;
+				}
+			}
+
+			.never {
+				margin-bottom: 1.5rem;
+				max-width: 33rem;
+
+				@include odaziv(smallphone) {
+					font-size: 1.5rem;
+				}
+			}
+
+			&__see {
+				display: inline-block;
+				border-bottom: 1px solid $Moderate_Cyan;
+
+				@include odaziv(smallphone) {
+					margin: 2rem 0;
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				.pomoc {
+					display: flex;
+					justify-content: start;
+					position: relative;
+
+					a {
+						display: block;
+						color: $Moderate_Cyan;
+						text-decoration: none;
+						padding-right: 15px;
+
+						@include odaziv(smallphone) {
+							font-size: 1.5rem;
+						}
+					}
+
+					svg {
+						width: 20px;
+						height: 20px;
+						align-self: end;
+						position: absolute;
+						right: -8px;
+					}
+				}
+			}
+
+			&__see:hover {
+				cursor: pointer;
+				border-bottom: 1px solid $Hover_Moderate_Cyan;
+			}
+
+			&__see:hover a {
+				color: $Hover_Moderate_Cyan;
+			}
+
+			&__see:hover .coloriz {
+				fill: $Hover_Moderate_Cyan;
+			}
+
+			&__card {
+				background: white;
+				margin-top: 3rem;
+				padding: 2rem 2rem 0 2rem;
+				border-radius: 6px;
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+				max-width: 430px;
+
+				@include odaziv(smallphone) {
+					max-width: 300px;
+				}
+
+				.improved {
+					max-width: 340px;
+					font-weight: bold;
+
+					@include odaziv(smallphone) {
+						font-size: 1.3rem;
+					}
+				}
+
+				&__profile {
+					// background: red;
+					display: flex;
+
+					.profile-picture {
+						align-self: center;
+						border-radius: 50%;
+						width: 10%;
+						height: 10%;
+					}
+
+					.txtdec {
+						margin-left: 7px;
+						display: flex;
+						height: 100px;
+						flex-direction: column;
+						// background: green;
+						justify-content: center;
+
+						@include odaziv(smallphone) {
+							height: 70px;
+						}
+
+						.kyle {
+							font-weight: bold;
+
+							@include odaziv(smallphone) {
+								font-size: 1.3rem;
+							}
+						}
+
+						.found {
+							font-size: small;
+
+							@include odaziv(smallphone) {
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.righto {
+			flex-basis: 50%;
+			width: 50%;
+			height: auto;
+			align-self: center;
+
+			@include odaziv(phone) {
+				align-self: flex-start;
+			}
+
+			@include odaziv(smallphone) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// main::after {
+// 	content: '';
+// 	position: absolute;
+// 	height: 100px;
+// 	right: 0;
+// 	left: 30%;
+// 	top: -70px;
+// 	background: white;
+// 	transform: skewY(2deg);
+// 	-webkit-transform: skewY(2deg);
+// 	-moz-transform: skewY(2deg);
+// 	-ms-transform: skewY(2deg);
+
+// 	@include odaziv(smallphone) {
+// 		height: 15px;
+// 		top: -10px;
+// 	}
+// }
+
+// main::before {
+// 	content: '';
+// 	position: absolute;
+// 	height: 100px;
+// 	left: 0;
+// 	right: 30%;
+// 	top: -70px;
+// 	background: white;
+// 	transform: skewY(-2deg);
+// 	-webkit-transform: skewY(-2deg);
+// 	-moz-transform: skewY(-2deg);
+// 	-ms-transform: skewY(-2deg);
+
+// 	@include odaziv(smallphone) {
+// 		height: 15px;
+// 		top: -10px;
+// 	}
+// }
+
+// .proba {
+// 	background-color: green;
+// 	// width: 500px;
+// 	// height: 50px;
+// 	border-bottom-left-radius: 20%;
+// 	border-bottom-right-radius: 20%;
+// }

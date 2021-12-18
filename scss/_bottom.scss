@@ -1,0 +1,245 @@
+.early {
+	background: $Desaturated_Blue;
+	font-family: 'Raleway', sans-serif;
+
+	.early_flex {
+		padding: 5rem 1rem;
+		display: flex;
+
+		@include odaziv(smallphone) {
+			flex-direction: column;
+			padding: 7rem 1rem;
+		}
+
+		.today {
+			color: $Light_Grayish_Blue;
+			flex-basis: 50%;
+
+			@include odaziv(phone) {
+				margin-left: 3rem;
+			}
+
+			@include odaziv(smallphone) {
+				flex-basis: 100%;
+				text-align: center;
+				margin-left: 0;
+				display: flex;
+				flex-direction: column;
+			}
+
+			&__head {
+				margin-bottom: 1rem;
+				font-size: 1.7rem;
+
+				@include odaziv(smallphone) {
+					font-size: 3rem;
+				}
+			}
+
+			&__parag {
+				max-width: 81%;
+
+				@include odaziv(smallphone) {
+					font-size: 1.85rem;
+					align-self: center;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+
+		.formica {
+			display: grid;
+			place-items: center;
+
+			.inputs2 {
+				@include odaziv(phone) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+
+			input[type=email] {
+				display: block;
+				padding: 0.7rem;
+				width: 35rem;
+				margin-bottom: 0.8rem;
+				color: $Light_Gray;
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+				border: none;
+				border-radius: 3px;
+				transition: 0.3s;
+
+				@include odaziv(phone) {
+					width: 20rem;
+				}
+
+				@include odaziv(smallphone) {
+					width: 35rem;
+				}
+			}
+
+			::placeholder {
+				color: $Light_Gray;
+				opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: $Light_Gray;
+			}
+
+			::-ms-input-placeholder {
+				/* Microsoft Edge */
+				color: $Light_Gray;
+			}
+
+			input[type=submit] {
+				color: $Light_Grayish_Blue;
+				background: $Bright_Blue;
+				border: none;
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+				border-radius: 3px;
+				transition: 0.3s;
+				padding: 0.7rem 1.5rem;
+				width: 15rem;
+
+				@include odaziv(smallphone) {
+					width: 35rem;
+				}
+			}
+
+			input[type=submit]:hover {
+				cursor: pointer;
+				background: $Hover_Bright_Blue;
+			}
+		}
+	}
+}
+
+footer {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 7rem;
+	background: $Very_Dark_Blue;
+
+	.bottomiro {
+		padding-bottom: 7rem;
+		display: flex;
+
+		@include odaziv(smallphone) {
+			flex-direction: column;
+		}
+
+		.info {
+			flex-basis: 40%;
+			margin-top: 1rem;
+
+			@include odaziv(smallphone) {
+				margin: 3rem 0 2rem;
+			}
+
+			.contacts {
+				padding-bottom: 20px;
+				display: flex;
+				align-items: center;
+				color: $Light_Grayish_Blue;
+
+				img {
+					flex-basis: 3%;
+				}
+
+				p {
+					padding-left: 20px;
+					flex-basis: 97%;
+
+					@include odaziv(smallphone) {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+
+		.faq1,
+		.faq2 {
+			flex-basis: 15%;
+			margin: 0 1rem;
+			padding: 0 2rem;
+
+			@include odaziv(smallphone) {
+				margin: 0;
+				padding: 0;
+				font-size: 1.5rem;
+			}
+
+			p {
+				padding-bottom: 1.2rem;
+			}
+
+			p:last-child {
+				padding-bottom: 0;
+			}
+
+			a {
+				color: $Light_Grayish_Blue;
+				text-decoration: none;
+				transition: 0.3s;
+			}
+
+			a:hover {
+				color: $Hover_Bright_Blue;
+			}
+		}
+
+		.faq1 {
+			@include odaziv(smallphone) {
+				margin-bottom: 4rem;
+			}
+		}
+
+		.icons {
+			display: flex;
+			flex-basis: 30%;
+			margin-left: 3rem;
+			padding-left: 4rem;
+
+			@include odaziv(phone) {
+				padding: 0;
+			}
+
+			@include odaziv(smallphone) {
+				margin: 5rem 0 0 0;
+				padding: 0;
+				justify-content: center;
+			}
+
+			#twittero {
+				@include odaziv(smallphone) {
+					display: grid;
+					place-items: center;
+				}
+			}
+
+			a {
+				padding-right: 20px;
+			}
+
+			a.last {
+				padding-right: 0;
+			}
+
+			.social-media {
+				fill: $Light_Grayish_Blue;
+				transition: 0.35s;
+			}
+
+			.social-media:hover {
+				fill: $Hover_Moderate_Cyan;
+			}
+		}
+	}
+
+	.close {
+		background: $Moderate_Cyan;
+		padding: 0.8rem 0;
+	}
+}

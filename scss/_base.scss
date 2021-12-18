@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	line-height: 1.6;
+
+	@include odaziv(phone) {
+		font-size: 62.5%; //10px=1rem 10/16=62.5%
+	}
+
+	@include odaziv(smallphone) {
+		font-size: 50%; //8px=1rem 8/16=50%
+	}
+	// font-size: 62.5%; //1rem=10px  10px/16px=62.5%
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700;800;900&display=swap');
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Raleway', sans-serif;
+.master_container {
+	max-width: 1200px;
+	padding: 0 30px;
+	margin: 50px auto 0;
+
+	@include odaziv(smallphone) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+	// position: relative;
+}
+.master_container2 {
+	max-width: 1200px;
+	padding: 0 30px;
+	margin: 0 auto;
+
+	// @include odaziv(smallphone) {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-content: center;
+	// }
+	// position: relative;
+}

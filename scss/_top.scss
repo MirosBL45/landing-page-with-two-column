@@ -1,0 +1,148 @@
+.navigat {
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	display: flex;
+	font-weight: 700;
+
+	@include odaziv(smallphone) {
+		font-weight: 500;
+		font-size: 1.3rem;
+
+		img {
+			width: 20%;
+		}
+	}
+
+	nav {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+		& > a:nth-child(3) {
+			margin-right: 0;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			margin-right: 4rem;
+			color: $Very_Dark_Blue;
+		}
+	}
+}
+
+.middle {
+	margin: 4rem 0 5.7rem;
+	font-family: 'Raleway', sans-serif;
+	display: flex;
+
+	@include odaziv(smallphone) {
+		flex-direction: column-reverse;
+		margin-top: 8rem;
+	}
+
+	.enter {
+		flex-basis: 50%;
+		display: flex;
+		align-self: center;
+		flex-direction: column;
+
+		@include odaziv(smallphone) {
+			text-align: center;
+		}
+
+		h1 {
+			font-weight: 700;
+			max-width: 29rem;
+			font-size: 1.9rem;
+
+			@include odaziv(smallphone) {
+				max-width: 35rem;
+				font-size: 2.4rem;
+				margin: 2.2rem 0;
+			}
+		}
+
+		p {
+			max-width: 28rem;
+			font-size: 0.9rem;
+
+			@include odaziv(smallphone) {
+				max-width: 35rem;
+				font-size: 1.6rem;
+				margin-bottom: 2rem;
+				// align-self: center;
+			}
+		}
+
+		.inputs {
+			margin-top: 1.5rem;
+
+			input[type=email] {
+				font-family: 'Raleway', sans-serif;
+				padding: 0.3rem 1.7rem 0.3rem 0.3rem;
+				color: $Light_Gray;
+				font-size: 0.7rem;
+
+				@include odaziv(smallphone) {
+					width: 100%;
+					margin-bottom: 1rem;
+					padding: 0.5rem 1.9rem 0.5rem 0.5rem;
+					font-size: 1rem;
+				}
+			}
+
+			::placeholder {
+				color: $Light_Gray;
+				opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: $Light_Gray;
+			}
+
+			::-ms-input-placeholder {
+				/* Microsoft Edge */
+				color: $Light_Gray;
+			}
+
+			input[type=submit] {
+				font-family: 'Raleway', sans-serif;
+				background: $Bright_Blue;
+				padding: 0.45rem 1.9rem;
+				color: $Light_Grayish_Blue;
+				font-size: 0.7rem;
+				border: none;
+				border-radius: 3px;
+				transition: 0.3s;
+
+				@include odaziv(smallphone) {
+					width: 100%;
+					padding: 0.3rem 1.9rem;
+					font-size: 1.5rem;
+					// font-weight: bold;
+				}
+			}
+
+			input[type=submit]:hover {
+				cursor: pointer;
+				background: $Hover_Bright_Blue;
+			}
+		}
+	}
+
+	img {
+		align-self: center;
+		flex-basis: 50%;
+		margin-left: auto;
+		width: 50%;
+		height: 50%;
+
+		@include odaziv(smallphone) {
+			width: 95%;
+			margin: 0 auto;
+			// align-self: center;
+		}
+	}
+}

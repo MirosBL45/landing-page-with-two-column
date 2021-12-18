@@ -1,0 +1,26 @@
+@import 'media';
+@import 'base';
+@import 'colors';
+@import 'top';
+@import 'midset';
+@import 'bottom';
+
+.attribution {
+	font-size: 0.9rem;
+	text-align: center;
+	color: $Light_Grayish_Blue;
+
+	@include odaziv(smallphone) {
+		font-size: 1.2rem;
+	}
+
+	a:hover {
+		color: $Very_Dark_Blue;
+		text-decoration: underline;
+	}
+}
+.attribution a {
+	color: $Light_Grayish_Blue;
+	transition: 0.35s;
+	text-decoration: none;
+}
